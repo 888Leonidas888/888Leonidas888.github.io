@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Compiler gcc</title>
+    <link rel="stylesheet" href="./style/style.css" />
+    <link
+      rel="shortcut icon"
+      href="./img/android-developer_icon-icons.com_50528.ico"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <h1>What happens when you type gcc main.c?</h1>
+    <div class="container-img">
+      <img
+        src="https://www3.ntu.edu.sg/home/ehchua/programming/cpp/images/GCC_CompilationProcess.png"
+        alt="compiler with gcc"
+      />
+    </div>
+
+    <h2>What is gcc?</h2>
+    <p>
+      <a href="https://www.rapidtables.org/code/linux/gcc.html">GCC</a> is a
+      collection of compilers created by the GNU project. A compiler is a
+      program that converts the source code written in a programming language
+      into machine code that can be executed by the computer. GCC supports
+      several programming languages, such as C, C++, Objective-C, Fortran, Ada
+      and Java. GCC is free software and is distributed under the GPL license.
+      GCC is one of the most widely used compilers in software development, as
+      it allows creating optimized and portable programs that work on different
+      platforms .
+    </p>
+    <h2>what happens inside?</h2>
+    <p>
+      When you compile a program in C using the GNU compiler
+      <a href="https://www.rapidtables.org/code/linux/gcc.html">(GCC)</a>, you
+      are performing a process that transforms the source code into executable
+      code by the processor. This process consists of several phases, which are
+      as follows
+    </p>
+
+    <ol>
+      <li>
+        <dl>
+          <dt>Preprocessor</dt>
+          <dd>
+            Expands the source code, replacing directives such as <span>#include</span> or
+            <span>#define</span> with their corresponding content.
+          </dd>
+        </dl>
+      </li>
+      <li>
+        <dl>
+          <dt>Compiler</dt>
+          <dd>
+            converts the expanded code into assembly code, which is a symbolic
+            representation of the low-level instructions that the processor
+            understands.
+          </dd>
+        </dl>
+      </li>
+      <li>
+        <dl>
+          <dt>Assembler</dt>
+          <dd>
+            converts the assembly code into object code, which is a binary form
+            of the assembly code.
+          </dd>
+        </dl>
+      </li>
+      <li>
+        <dl>
+          <dt>Linker</dt>
+          <dd>
+            links the object code with the necessary libraries to create the
+            executable file, which contains the machine code that can be
+            executed directly by the processor.
+          </dd>
+        </dl>
+      </li>
+    </ol>
+
+    <h2>nothing complicated</h2>
+    <ol class="compiler">
+      <li>Create file main.c</li>
+      <p>Our program will show the famous "Hello world".</p>
+      <img src="./img/hello_world.png" alt="file main.c" />
+      <li>Compilation using <span>gcc main.c</span></li>
+      <p>
+        When using only <code>gcc main.c</code> , it will return an executable with the
+        following default name <code>o.out</code> this is in Linux if you do it in windows it
+        will be <code>o.exe</code>, we can change it using the following command <code>gcc -o main</code> 
+        main.c, visit the
+        <a href="https://man7.org/linux/man-pages/man1/gcc.1.html">man</a> to
+        know what else he can do.
+      </p>
+      <img src="./img/gcc_main_c.png" alt="compilation" />
+      <li>Executing our program</li>
+      <p>It will be simple as using <code>./a.out</code></p>
+      <img src="./img/Captura de pantalla 2023-08-06 221247.png" alt="output" />
+    </ol>
+    <p>
+      This resource was created by
+      <a
+      href="https://github.com/888Leonidas888/holbertonschool-low_level_programming"
+      >Jhony Escriba
+    </a>
+    with the support of bing chat.
+  </p>
+  </body>
+</html>
